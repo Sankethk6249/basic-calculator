@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Calc Hub: a calculator dashboard developed by Sanketh Kumar." />
+  <meta name="author" content="Sanketh Kumar" />
+  <title>Calc Hub | Developed by Sanketh Kumar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top">Calc Hub</a>
+    <nav aria-label="Main">
+      <a href="#calculator">Calculator</a>
+      <a href="#history">History</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page" id="top">
+    <!-- Admin / developer card -->
+    <section class="card welcome">
+      <div class="avatar" aria-hidden="true">S</div>
+      <div>
+        <p class="label">Admin</p>
+        <h1>Welcome, Sanketh</h1>
+        <p class="muted">Developed by <strong>Sanketh Kumar</strong></p>
+      </div>
+    </section>
+
+    <!-- Dashboard stats -->
+    <section class="stats" aria-label="Dashboard statistics">
+      <div class="card stat"><span>Calculations</span><strong id="statCount">0</strong></div>
+      <div class="card stat"><span>Last result</span><strong id="statLast">-</strong></div>
+      <div class="card stat"><span>Version</span><strong>1.0</strong></div>
+    </section>
+
+    <section class="two">
+      <!-- Calculator -->
+      <div class="card" id="calculator">
+        <h2>Calculator</h2>
+        <div class="display" aria-live="polite">
+          <div id="exprLine" class="expr-line"></div>
+          <div id="current" class="current">0</div>
+        </div>
+
+        <div class="keys">
+          <button class="key fn" data-action="clear" aria-label="All clear">AC</button>
+          <button class="key fn" data-action="backspace" aria-label="Backspace">⌫</button>
+          <button class="key fn" data-action="percent" aria-label="Percent">%</button>
+          <button class="key op" data-op="/" aria-label="Divide">÷</button>
+
+          <button class="key" data-num="7">7</button>
+          <button class="key" data-num="8">8</button>
+          <button class="key" data-num="9">9</button>
+          <button class="key op" data-op="*" aria-label="Multiply">×</button>
+
+          <button class="key" data-num="4">4</button>
+          <button class="key" data-num="5">5</button>
+          <button class="key" data-num="6">6</button>
+          <button class="key op" data-op="-" aria-label="Subtract">−</button>
+
+          <button class="key" data-num="1">1</button>
+          <button class="key" data-num="2">2</button>
+          <button class="key" data-num="3">3</button>
+          <button class="key op" data-op="+" aria-label="Add">+</button>
+
+          <button class="key zero" data-num="0">0</button>
+          <button class="key" data-action="decimal" aria-label="Decimal point">.</button>
+          <button class="key equals" data-action="equals" aria-label="Equals">=</button>
+        </div>
+        <p class="hint">Keyboard: 0-9, + - * /, Enter, Backspace, Esc</p>
+      </div>
+
+      <!-- History -->
+      <div class="card" id="history">
+        <div class="row-between">
+          <h2>Recent calculations</h2>
+          <button class="small-btn" id="clearHistory">Clear</button>
+        </div>
+        <ul id="historyList" class="history-list"></ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="card" id="contact">
+      <h2>Contact the developer</h2>
+      <p class="muted">Sanketh Kumar - B.Tech Computer Science Engineering, Sir M. Visvesvaraya College of Engineering (VTU)</p>
+      <ul class="contact-list">
+        <!-- EDIT: replace the placeholders below with your real details -->
+        <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/sanketh-k-387aa432a" target="_blank" rel="noopener">linkedin.com/in/sanketh-k-387aa432a</a></li>
+        <li><span>Email</span><a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a></li>
+        <li><span>GitHub</span><a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noopener">github.com/YOUR_GITHUB_USERNAME</a></li>
+        <li><span>Phone</span><a href="tel:+91XXXXXXXXXX">+91 XXXXXXXXXX</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year">2026</span> Calc Hub. Admin: Sanketh. Developed by Sanketh Kumar.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
